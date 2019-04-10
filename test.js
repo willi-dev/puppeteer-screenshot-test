@@ -66,9 +66,13 @@ const appTest = {
    * @param {*} vpHeight 
    */
   runTest: async function(name, url, vpWidth, vpHeight) {
+    console.log('==================================================');
+    console.log('[take screenshot] launch...');
     let browser = await puppeteer.launch({ headless: this.headless });
     let page = await browser.newPage();
+    console.log('[take screenshot] ' + vpWidth + 'x' + vpHeight);
     await page.setViewport({ width: vpWidth, height: vpHeight });
+    console.log('[take screenshot] ' + url);
     await page.goto(url);
     const bodyHandle = await page.$('body');
     const { width, height } = await bodyHandle.boundingBox();
@@ -84,7 +88,9 @@ const appTest = {
     });
     await bodyHandle.dispose();
     await page.close();
-    await browser.close();  
+    await browser.close();
+    console.log('[take screenshot] finish...');
+    console.log('==================================================');
   },
 
   /**

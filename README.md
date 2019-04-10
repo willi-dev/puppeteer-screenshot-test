@@ -24,3 +24,9 @@ const appTest = {
 }
 ...
 ```
+## take screenshot
+
+``` bash
+# run your screenshot test
+$ node test.js
+```
