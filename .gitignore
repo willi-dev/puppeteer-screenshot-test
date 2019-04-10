@@ -1,0 +1,8 @@
+*.jpg
+*.png
+
+# dependencies
+/node_modules
+/bower_components
+/logs
+/coverage
