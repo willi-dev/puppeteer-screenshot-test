@@ -1,51 +1,11 @@
 const puppeteer = require('puppeteer');
 
-const bbxTest = {
-  baseURL: 'http://alpha.bobobox.co.id',
+const appTest = {
+  baseURL: 'http://example.com',
   listPages: [
     {
       name: 'homepage',
       url: '/'
-    },
-    {
-      name: 'about',
-      url: '/about'
-    },
-    {
-      name: 'career',
-      url: '/career'
-    },
-    {
-      name: 'terms-condition',
-      url: '/terms-condition'
-    },
-    {
-      name: 'privacy-policy',
-      url: '/privacy-policy'
-    },
-    {
-      name: 'partner',
-      url: '/promo'
-    },
-    {
-      name: 'franchise',
-      url: '/franchise'
-    },
-    {
-      name: 'why-bobobox',
-      url: '/why-bobobox'
-    },
-    {
-      name: 'contact',
-      url: '/contact'
-    },
-    {
-      name: 'promo',
-      url: '/promo'
-    },
-    {
-      name: 'faq',
-      url: '/faq'
     }
   ],
   /**
@@ -139,4 +99,4 @@ const bbxTest = {
   }
 }
 
-bbxTest.run();
+appTest.run();
